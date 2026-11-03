@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A curated archive of games, mods, total conversions and community projects.">
+  <title>Game Archive — Games, Mods & Community Projects</title>
+  <style>
+    :root {
+      --bg: #101310;
+      --panel: #191f19;
+      --panel-2: #202920;
+      --text: #edf2e8;
+      --muted: #a7b2a1;
+      --accent: #b6e36a;
+      --accent-dark: #27351c;
+      --line: #344032;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 15% 0%, rgba(142,190,79,.13), transparent 38rem),
+        var(--bg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 58px 0 36px; border-bottom: 1px solid var(--line); }
+    .eyebrow {
+      color: var(--accent); text-transform: uppercase; letter-spacing: .18em;
+      font-size: .75rem; font-weight: 750;
+    }
+    h1 { margin: 10px 0 8px; font-size: clamp(2.4rem, 7vw, 4.6rem); line-height: 1.02; letter-spacing: -.055em; }
+    .intro { max-width: 660px; margin: 16px 0 0; color: var(--muted); font-size: 1.08rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    nav a {
+      text-decoration: none; color: var(--text); border: 1px solid var(--line);
+      padding: 7px 13px; border-radius: 999px; font-size: .9rem;
+    }
+    nav a:hover { border-color: var(--accent); color: var(--accent); }
+    main { padding: 38px 0 70px; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:18px; }
+    h2 { margin:0; font-size:1.55rem; letter-spacing:-.025em; }
+    .section-note { color:var(--muted); font-size:.9rem; }
+    .grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px; }
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,.025), transparent 55%), var(--panel);
+      border:1px solid var(--line); border-radius:16px; padding:22px;
+      display:flex; flex-direction:column; min-height:250px;
+    }
+    .tag {
+      align-self:flex-start; color:var(--accent); background:var(--accent-dark);
+      border:1px solid #40552b; border-radius:999px; padding:3px 10px;
+      font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700;
+    }
+    .card h3 { margin:14px 0 6px; font-size:1.3rem; }
+    .card p { color:var(--muted); margin:0 0 18px; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:auto; }
+    .button {
+      display:inline-block; text-decoration:none; color:#11170c; background:var(--accent);
+      font-weight:750; border-radius:9px; padding:9px 14px;
+    }
+    .button:hover { filter:brightness(1.08); }
+    .button.secondary { background:transparent; color:var(--text); border:1px solid var(--line); }
+    .button.secondary:hover { border-color:var(--accent); color:var(--accent); }
+    .notice {
+      margin-top:24px; padding:15px 18px; border:1px dashed #53634a; border-radius:12px;
+      color:var(--muted); font-size:.9rem; background:rgba(182,227,106,.035);
+    }
+    footer { border-top:1px solid var(--line); padding:22px 0 34px; color:var(--muted); font-size:.85rem; }
+    @media (max-width:700px) {
+      .grid { grid-template-columns:1fr; }
+      header { padding-top:42px; }
+      .section-head { display:block; }
+      .section-note { margin-top:5px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Independent game catalog</div>
+      <h1>Game Archive<span style="color:var(--accent)">.</span></h1>
+      <p class="intro">A growing collection of games, mods, total conversions and community-made projects. Discover something worth playing.</p>
+      <nav aria-label="Main navigation">
+        <a href="#games">Games & Projects</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="games">
+      <div class="section-head">
+        <h2>Games & Projects</h2>
+        <div class="section-note">A small selection — more entries coming soon.</div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Total conversion · Fallout 2</span>
+          <h3>Fallout: Sonora</h3>
+          <p>A fan-made total conversion for Fallout 2, offering a new adventure, setting and quests in the Fallout universe.</p>
+          <div class="actions">
+            <!-- Replace # with the project's official download page. -->
+            <a class="button" href="#" target="_blank" rel="noopener">Download / Project page</a>
+            <a class="button secondary" href="#" target="_blank" rel="noopener">More information</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Total conversion · Fallout 2</span>
+          <h3>Fallout: Nevada</h3>
+          <p>A standalone fan-made adventure built on Fallout 2, with its own story, locations and characters.</p>
+          <div class="actions">
+            <!-- Replace # with the project's official download page. -->
+            <a class="button" href="#" target="_blank" rel="noopener">Download / Project page</a>
+            <a class="button secondary" href="#" target="_blank" rel="noopener">More information</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Your next entry</span>
+          <h3>Coming soon</h3>
+          <p>This space is ready for another game, mod, patch or community project.</p>
+          <div class="actions">
+            <a class="button secondary" href="#about">About this archive</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>Download note:</strong> This catalog should link to official project pages or sources authorized by the creators/rightsholders. It does not host game files.
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:52px">
+      <div class="section-head"><h2>About this archive</h2></div>
+      <p class="intro" style="margin-top:0">An independent directory for interesting games and community projects. Entries can include a short description, screenshots, installation notes and a link to the creator's download page.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Game Archive · Independent fan-made catalog. Not affiliated with any game publisher.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
