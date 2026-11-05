@@ -232,28 +232,43 @@ main{padding:46px 0 70px}
       <button class="support-close" type="button" aria-label="Close window">&times;</button>
       <p class="support-eyebrow">A little something before the wasteland</p>
       <h2 class="support-title" id="support-title">ENJOYING FALLOUT ON ANDROID?</h2>
-      <p class="support-copy">You can leave a voluntary contribution to help keep the updates coming.</p>
+      <p class="support-copy">Before downloading this archive, you can leave a voluntary contribution to help keep the updates coming.</p>
       <img class="support-caps" src="caps.png" alt="A stack of bottle caps">
       <p class="support-note">Any amount. Completely optional.</p>
       <a class="support-kofi" href="https://ko-fi.com/penstock" target="_blank" rel="noopener noreferrer">SPARE A CAP</a>
-      <a class="support-continue" id="continue-download" href="https://github.com/vonLantzps/game-stock/releases/download/android-v1.0/Fallout.2.Portable.apk">Continue to free download</a>
+      <a class="support-continue" id="continue-download" href="#">Continue to free download</a>
     </div>
   </dialog>
 
 
 <script>
 (() => {
-  const downloadLink = document.querySelector(".app-download-button");
+  const archiveLinks = document.querySelectorAll(".game-card .download-button");
   const dialog = document.getElementById("support-dialog");
+  const continueLink = document.getElementById("continue-download");
   const closeButton = dialog?.querySelector(".support-close");
   const kofiLink = dialog?.querySelector(".support-kofi");
 
-  if (!downloadLink || !dialog) return;
+  if (!dialog || !continueLink || archiveLinks.length === 0) return;
 
-  downloadLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (typeof dialog.showModal === "function") dialog.showModal();
-    else window.location.href = document.getElementById("continue-download").href;
+  archiveLinks.forEach((archiveLink) => {
+    archiveLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      continueLink.href = archiveLink.href;
+
+      const downloadName = archiveLink.getAttribute("download");
+      if (downloadName) {
+        continueLink.setAttribute("download", downloadName);
+      } else {
+        continueLink.removeAttribute("download");
+      }
+
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        window.location.href = continueLink.href;
+      }
+    });
   });
 
   closeButton?.addEventListener("click", () => dialog.close());
