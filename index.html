@@ -123,6 +123,14 @@ main{padding:46px 0 70px}
   outline-offset:3px;
   border-radius:8px;
 }
+.app-download-row{
+  display:flex;
+  justify-content:center;
+  padding:34px 0 0;
+}
+.app-download-button{
+  width:min(340px,100%);
+}
 @media(max-width:600px){
   .site-header{min-height:120px}
   main{padding-top:28px}
@@ -139,6 +147,16 @@ main{padding:46px 0 70px}
 </header>
 
 <main class="wrap">
+  <div class="app-download-row">
+    <a
+      class="download-button app-download-button"
+      href="https://github.com/vonLantzps/game-stock/releases/download/android-v1.0/Fallout.2.Portable.apk"
+      aria-label="Download Fallout 2 Portable APK"
+    >
+      <img src="download-plaque.png" alt="">
+      <span>Download app</span>
+    </a>
+  </div>
   <section class="game-grid" aria-label="Available games">
     <article class="game-card">
       <img
