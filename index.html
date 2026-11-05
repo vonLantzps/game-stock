@@ -157,8 +157,9 @@ main{padding:46px 0 70px}
 .support-copy{max-width:420px;margin:0 auto;color:#d0d8d0;line-height:1.55}
 .support-caps{display:block;width:min(190px,55%);max-height:140px;object-fit:contain;margin:17px auto 10px}
 .support-note{margin:3px 0 18px;color:#aeb9ae;font-size:.82rem}
-.support-kofi{display:flex;align-items:center;justify-content:center;width:min(100%,360px);min-height:54px;margin:0 auto 13px;padding:12px 20px;border:1px solid #b28b50;border-radius:8px;background:linear-gradient(180deg,#d8b36d,#a97837);color:#24190e;font-family:"Anton",Impact,sans-serif;font-size:1.25rem;letter-spacing:.06em;text-decoration:none;text-shadow:0 1px rgba(255,255,255,.2);transition:filter .15s ease,transform .15s ease}
-.support-kofi:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.support-kofi{display:block;width:min(100%,360px);margin:0 auto 13px;border:0;border-radius:8px;text-decoration:none;transition:filter .15s ease,transform .15s ease}
+.support-kofi img{display:block;width:100%;height:auto;object-fit:contain}
+.support-kofi:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .support-continue{display:inline-block;padding:10px 12px;color:#dce9d4;font-size:.92rem;font-weight:650;text-decoration:underline;text-underline-offset:3px}
 .support-continue:hover{color:#fff}
 .support-dialog a:focus-visible,.support-close:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -231,12 +232,12 @@ main{padding:46px 0 70px}
     <div class="support-dialog-inner">
       <button class="support-close" type="button" aria-label="Close window">&times;</button>
       <p class="support-eyebrow">A little something before the wasteland</p>
-      <h2 class="support-title" id="support-title">ENJOYING FALLOUT ON ANDROID?</h2>
-      <p class="support-copy">Before downloading this archive, you can leave a voluntary contribution to help keep the updates coming.</p>
+      <h2 class="support-title" id="support-title">READY TO HEAD OUT INTO THE WASTELAND?</h2>
+      <p class="support-copy">Help keep these classics alive with whatever you can spare on Ko-fi.</p>
       <img class="support-caps" src="caps.png" alt="A stack of bottle caps">
-      <p class="support-note">Any amount. Completely optional.</p>
-      <a class="support-kofi" href="https://ko-fi.com/penstock" target="_blank" rel="noopener noreferrer">SPARE A CAP</a>
-      <a class="support-continue" id="continue-download" href="#">Continue to free download</a>
+      <p class="support-note">Completely optional.</p>
+      <a class="support-kofi" href="https://ko-fi.com/penstock" target="_blank" rel="noopener noreferrer" aria-label="SPARE A CAP — support on Ko-fi"><img src="btn_launch.png" alt="SPARE A CAP"></a>
+      <a class="support-continue" id="continue-download" href="#">Continue to download</a>
     </div>
   </dialog>
 
